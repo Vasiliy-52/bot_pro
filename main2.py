@@ -9,3 +9,5 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start','help'])
 def send_welcom(message):
     bot.send_message(message.chat.id, f'Welcom, {message.chat.username}')
+
+bot.polling(none_stop=True)
